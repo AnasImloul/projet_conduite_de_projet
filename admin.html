@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<title>Login</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
+
+</style>
+<body class="black">
+
+  <div id = "francais">
+    <header class="bar black large">
+      <img class="image margin-right" src="logo.png" alt="INPT" style="min-width:40px" width="40" height="40">Site de la réservation des salles à l'INPT</img>
+      <a  class="right button black" onclick = "hide('english');show('francais');">fr</a>
+      <a  class="right button black" onclick = "hide('francais');show('english');"><i class="fa fa-language margin-right"></i>en</a>
+    </header>
+  <!-- Header -->
+  <div class="display-container content" style="max-width:1600px;">
+    <img class="image" src="INPT.jpg" alt="The Hotel" style="min-width:1600px" width="1600" height="900">
+    <div class="display-middle padding col l6 m8">
+      <div class="container dark-gray">
+        <h2><i class="fa fa-user margin-right"></i>Bonjour chère Administration</h2>
+      </div>
+      <div class="container white padding-16">
+        Ici vous pouvez controler la réservation des salles CC.
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div id = "english">
+    <header  class="bar black large">
+      <img class="image margin-right" src="logo.png" alt="The Hotel" style="min-width:40px" width="40" height="40">Site de la réservation des salles à l'INPT</img>
+      <a  class="right button black" onclick = "hide('english');show('francais');">fr</a>
+      <a  class="right button black" onclick = "hide('francais');show('english');"><i class="fa fa-language margin-right"></i>en</a>
+    </header>
+  <!-- Header -->
+  <div  class="display-container content" style="max-width:1600px;">
+    <img class="image" src="INPT.jpg" alt="The Hotel" style="min-width:1600px" width="1600" height="900">
+    <div class="display-middle padding col l6 m8">
+      <div class="container dark-gray">
+        <h2><i class="fa fa-user margin-right"></i>Welcome dear Administration</h2>
+      </div>
+      <div class="container white padding-16">
+        Here you can control the services of CC rooms booking in INPT.
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="container center black margin-bottom" width="1500">
+  <p>INPT 2021</a></p>
+</footer>
+<script>
+hide("english");
+function hide(name) {
+  var x = document.getElementById(name);
+  console.log(x);
+  var d = x.style.display;
+  if (d != "none") {
+    x.style.display = "none";
+  }
+}
+
+function show(name) {
+  var x = document.getElementById(name);
+  var d = x.style.display;
+  if (d == "none") {
+    x.style.display = "block";
+  }
+}
+
+function english(){
+  hide("francais");
+  show("english");
+}
+
+function francais(){
+  hide("english");
+  show("francais");
+}
+</script>
+</body>
+</html>
